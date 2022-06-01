@@ -1,7 +1,15 @@
 import React from 'react'
 import Footer from '../Footer'
+import Data from "./Data"
+import { Link, useParams } from "react-router-dom";
 
 const Details = () => {
+    
+    const { id }= useParams()
+    // const data = Data.cardData.findIndex(id)
+    let data = Data.cardData[id];
+     const datam = Object(data)
+    console.log(datam)
   return (
     <div>
 
@@ -14,8 +22,8 @@ const Details = () => {
     <div class="d-flex justify-content-between align-items-center">
       <h2>Portfolio Details</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><a href="#">Portfolio</a></li>
         <li>Portfolio Details</li>
       </ol>
     </div>
@@ -35,16 +43,16 @@ const Details = () => {
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/portfolio-details-1.jpg" alt=""/>
+              <img src={datam.imgdetails} alt=""/>
+            </div>
+
+            {/* <div class="swiper-slide">
+              <img src={datam.image} alt=""/>
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/portfolio-details-2.jpg" alt=""/>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/portfolio-details-3.jpg" alt=""/>
-            </div>
+              <img src={datam.image} alt=""/>
+            </div> */}
 
           </div>
           <div class="swiper-pagination"></div>
@@ -55,9 +63,9 @@ const Details = () => {
         <div class="portfolio-info">
           <h3>Project information</h3>
           <ul>
-            <li><strong>Category</strong>: Web design</li>
-            <li><strong>Client</strong>: ASU Company</li>
-            <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            <li><strong>Category</strong>:{datam.category}</li>
+            <li><strong>Name</strong>: {datam.name}</li>
+            <li><strong>Project URL</strong>: <a className='sizesetting' href={datam.url} target='_blank'>{datam.url}</a></li>
           </ul>
         </div>
         <div class="portfolio-description">

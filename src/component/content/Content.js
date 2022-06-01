@@ -1,10 +1,11 @@
-import React from 'react'
-// import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import Footer from '../Footer'
-import Header from '../Header'
-
+import Worksamples from './Worksamples';
 
 const Content = () => {
+    
+
   return (
     <div>
         
@@ -28,7 +29,7 @@ const Content = () => {
             <div className="about-descr">
 
               <p className="p-heading"> Hello, my name is mobina hoseinpur ,im front developer,I am a ui / ux designer and I love minimalist designs, simple & unique design. i also enjoy crafting brand identities,work. </p>
-              <p className="separator">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family.English person.</p>
+              <p className="separator">In the field of front end I work with the framework React js and JavaScript, Bootstrap and finally with html and css</p>
 
             </div>
 
@@ -39,11 +40,11 @@ const Content = () => {
     {/* <!-- End About Section --> */}
 
     {/* <!-- ======= Services Section ======= --> */}
-    <div id="services">
+    {/* <div id="services">
       <div className="container">
 
         <div className="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div className="swiper-wrapper">
+          {/* <div className="swiper-wrapper"> 
 
             <div className="swiper-slide">
               <div className="services-block">
@@ -52,7 +53,7 @@ const Content = () => {
                 <p className="separator">To an English person, it will seem like simplified English,told me what </p>
               </div>
             </div>
-            {/* <!-- End testimonial item --> */}
+            {/* <!-- End testimonial item --> *
 
             <div className="swiper-slide">
               <div className="services-block">
@@ -61,7 +62,7 @@ const Content = () => {
                 <p className="separator">To an English person, it will seem like simplified English,told me what </p>
               </div>
             </div>
-            {/* <!-- End testimonial item --> */}
+            {/* <!-- End testimonial item --> *
 
             <div className="swiper-slide">
               <div className="services-block">
@@ -72,108 +73,17 @@ const Content = () => {
             </div>
             {/* <!-- End testimonial item --> */}
 
-          </div>
+          {/* </div> 
           <div className="swiper-pagination"></div>
         </div>
 
       </div>
 
-    </div>
+    </div> */}
     {/* <!-- End Services Section --> */}
 
-    {/* <!-- ======= Portfolio Section ======= --> */}
-    <div id="portfolio" className="paddsection">
-
-      <div className="container">
-        <div className="section-title text-center">
-          <h2>My Portfolio</h2>
-        </div>
-      </div>
-
-      <div className="container">
-
-        <div className="row">
-          <div className="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" className="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=" ">design</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="row portfolio-container">
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" className="img-fluid" alt=""/>
-            <div className="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="App 1"><i className="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" className="img-fluid" alt=""/>
-            <div className="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Web 3"><i className="bx bx-plus"></i></a>
-              {/* <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a> */}
-              {/* <Link to="/Details" className="details-link" title="More Details"><i className="bx bx-link"></i></Link> */}
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" className="img-fluid" alt=""/>
-            <div className="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="App 2"><i className="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-4.jpg" className="img-fluid" alt=""/>
-            <div className="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Web 2"><i className="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" className="img-fluid" alt=""/>
-            <div className="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="Web 2"><i className="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" className="img-fluid" alt=""/>
-            <div className="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox preview-link" title="App 3"><i className="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" className="details-link" title="More Details"><i className="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    {/* <!-- End Portfolio Section --> */}
-
-
+    <Worksamples/>
+    {/* port */}
 
     {/* <!-- ======= Contact Section ======= --> */}
     <div id="contact" className="paddsection">
